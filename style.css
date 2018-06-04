@@ -6,6 +6,7 @@ body{
   color: #090d47;
 }
 
+/*navigation bar*/
 button{
   float:right;
   background: #eaeaea;
@@ -22,45 +23,44 @@ button{
   transition: .7s background-color;
 }
 
-.heading{
-  margin-top: 9rem;
-}
-
+/*My name*/
 h1{
   font-size: 3.5rem;
   font-family: Handlee, cursive;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
+/*My picture*/
 #photo{
   border-radius: 50%;
   padding: .5rem;
   border: solid #dbdbdb;
   margin-top:2rem;
+  width: 15rem;
 }
 
+/*Body*/
 ul {
   list-style-type: none;
-
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  
 }
 
-li{
-  color: orange;
-  font-size: 2rem;
+.show-grid{
+  border: solid #dbdbdb;
+  height: 25rem;
+  margin-top: 2rem;
 }
 
-h3{
-  font-size:2rem;
+.body{
+  font-size: 1.3rem;
 }
 
-.subHeading{
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
 
-.info{
-  width: 60rem;
-  margin-left:auto; 
-  margin-right:auto;
-}
+
 
