@@ -4,24 +4,26 @@ let Row = ReactBootstrap.Row;
 let Col = ReactBootstrap.Col;
 let code = ReactBootstrap.code;
 
+
+//Text to appear in the body when the user clicks
 const texts = [
-  ['Front-End Developer'],
-  ['Text 2'],
-  ['Text 3'],
-  ['Text 4'],
+  [''],
+  ['I first learned about coding alongside my 5th graders. After 8 years teaching English as a Second Language, I decided to switch careers. Today, I am proficient in regular expressions, HTML, CSS, JavaScript, jQuery, and ReactJS'],
+  ['Work samples are available on my GitHub page: https://github.com/jennnico'],
+  ['Please contact me on LinkedIn.'],
 ];
 
 class Content extends React.Component{
 
-//set the state
+//Set the state. Body is empty to begin.
 constructor(props){
  super(props);
   this.state = {
-      clickedText: ['Front-End Developer']
+      clickedText: ['']
     }
 }
  
-  //set the state when you click
+  //Set the state with a new text, based on index
   handleClick = (i) => {
         this.setState({ clickedText: texts[i] });
   };
@@ -43,13 +45,16 @@ constructor(props){
         <ul>
           {clickedText.map((t, i) => (
             <div>
-              <li id = "name"><h1>Jennifer Grace</h1></li>
-            <li key={`text-${i}`}>{t}</li></div>
+              <li id = "name" class = "body"><h1>Jennifer Grace</h1></li>
+              <li class = "body"><h2>Front-End Developer</h2></li>
+
+    <li class = "body" key={`text-${i}`}>{t}</li>
+              </div>
           ))}
        </ul>
     </Col>  
     <Col md={6} mdPull={6}>
-      <h1>Move image here!</h1>
+      <img id="photo" src = 'https://lh3.googleusercontent.com/BXUiAqbmNM-b5zE2H6nRjqpmdYCcbkK23XHEAxxenkj5Yzp9KXbYMsbRv2-ChTv98xXTqG1UskLOX0LAAHJsn77qN1gbPHC_clwqDrd1uqHH0H0HMUcSWmwHgJmWWajHYFZawaOQWw' />
     </Col>       
   </Row>
  </Grid>
