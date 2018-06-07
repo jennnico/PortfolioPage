@@ -2,10 +2,8 @@
 
 Simple portfolio page using HTML and CSS. Currently updating with ReactJS.
 
-5/31/2018
+ReactBootstrap used to create a Grid, Row, and Col, so text and photo appear side-by-side. CSS @keyframes used to make photo fade-in. Opacity of the content is set to 0 on page load, then 1 the first time the user clicks.
 
-Skeleton of the portfolio page, using some react components. Buttons are working. Design and layout need attention.
+Areas for improvement: make the text fade-in and fade-out each time the user clicks using ReactCSSTransitionGroup
 
-6/4/2018
 
-Cleaned up portfolio page. ReactBootstrap used to create a Grid, Row, and Col, so text and photo appear side-by-side.
