@@ -2,8 +2,11 @@
 let Grid = ReactBootstrap.Grid;
 let Row = ReactBootstrap.Row;
 let Col = ReactBootstrap.Col;
-let code = ReactBootstrap.code;
+const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
+const styles = {
+  transition: 'all 1s ease-out'
+};
 
 //Text to appear in the body when the user clicks
 const texts = [
@@ -19,13 +22,14 @@ class Content extends React.Component{
 constructor(props){
  super(props);
   this.state = {
-      clickedText: ['']
+      clickedText: [''],
+      opacity: 0
     }
 }
  
   //Set the state with a new text, based on index
   handleClick = (i) => {
-        this.setState({ clickedText: texts[i] });
+        this.setState({ clickedText: texts[i], opacity: 1 });
   };
  
 
@@ -33,28 +37,41 @@ constructor(props){
     const { clickedText } = this.state;
     return(
       <div>
+        {/* navigation buttons */} 
         <button key={3} onClick={() => this.handleClick(3)}>Contact</button>
         <button key={2} onClick={() => this.handleClick(2)}>Portfolio</button>
         <button key={1} onClick={() => this.handleClick(1)}>About</button>
         <button key={0} onClick={() => this.handleClick(0)}>Home</button>
         <br/>
-          
+      
+        {/* Content */}
 <Grid>
   <Row  className="show-grid">
       <Col md={6} mdPush={6}>
         <ul>
           {clickedText.map((t, i) => (
-            <div>
-              <li id = "name" class = "body"><h1>Jennifer Grace</h1></li>
-              <li class = "body"><h2>Front-End Developer</h2></li>
+            <div> 
+              {/* Heading */}
+              <li id = "name" className = "body"><h1>Jennifer Grace</h1></li>
+              <li className = "body"><h2>Front-End Developer</h2></li>
 
-    <li class = "body" key={`text-${i}`}>{t}</li>
+              {/* Fade-in text... not working yet */}
+              <ReactCSSTransitionGroup
+                   transitionName="fade"
+                   transitionEnter={300}
+                   transitionLeave={500}>
+                {/* Text to fade in/out */}
+                
+              <li className = "body" className = "text" style={{...styles, opacity: this.state.opacity}} key={`text-${i}`}>{t}</li> 
+              </ReactCSSTransitionGroup>
+           
               </div>
           ))}
        </ul>
-    </Col>  
+    </Col>
+    {/* 2nd column: photo */}
     <Col md={6} mdPull={6}>
-      <img id="photo" src = 'https://lh3.googleusercontent.com/BXUiAqbmNM-b5zE2H6nRjqpmdYCcbkK23XHEAxxenkj5Yzp9KXbYMsbRv2-ChTv98xXTqG1UskLOX0LAAHJsn77qN1gbPHC_clwqDrd1uqHH0H0HMUcSWmwHgJmWWajHYFZawaOQWw' />
+      <img id="photo" alt="" src = 'https://lh3.googleusercontent.com/BXUiAqbmNM-b5zE2H6nRjqpmdYCcbkK23XHEAxxenkj5Yzp9KXbYMsbRv2-ChTv98xXTqG1UskLOX0LAAHJsn77qN1gbPHC_clwqDrd1uqHH0H0HMUcSWmwHgJmWWajHYFZawaOQWw' />
     </Col>       
   </Row>
  </Grid>
