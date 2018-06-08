@@ -1,3 +1,9 @@
 # PortfolioPage
 
-Simple portfolio page using HTML and CSS. Currently updating with ReactJS.
+Portfolio page using HTML and CSS only.
+
+Hightlights:
+
+Fixed position navigation bar.
+
+Hyperlinks to completed projects on CodePen, and LinkedIn profile.
