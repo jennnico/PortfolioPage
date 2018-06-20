@@ -1,19 +1,34 @@
+<!DOCTYPE html>
+<html>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Handlee|Quicksand|Rufina" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
   
 <body>
   <!--Buttons-->
+  
   <div class="nav">
   <ul>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#name">Home</a></li>    
+    <li id = "navContact"><a href="#contact">Contact</a></li>
+    <li id = "navPortfolio"><a href="#portfolio">Portfolio</a></li>
+    <li id = "navAbout"><a href="#about">About</a></li>
+    <li id = "navHome"><a href="#name">Home</a></li>    
   </div>
   
-<!-- Title and photo here -->
+    
+<!--Home Page-->
+    
+<div id = "home">
 <section class = "container">
   <div class = "row">
     <!--Just title -->
@@ -25,43 +40,51 @@
     </div>
  <!--Just photo--> 
     <div class = "col-sm-6">
-<a ><img id="photo" alt="" src='https://lh3.googleusercontent.com/BXUiAqbmNM-b5zE2H6nRjqpmdYCcbkK23XHEAxxenkj5Yzp9KXbYMsbRv2-ChTv98xXTqG1UskLOX0LAAHJsn77qN1gbPHC_clwqDrd1uqHH0H0HMUcSWmwHgJmWWajHYFZawaOQWw' /></a>
+      <a>
+      <img id="photo" alt="" src='https://lh3.googleusercontent.com/BXUiAqbmNM-b5zE2H6nRjqpmdYCcbkK23XHEAxxenkj5Yzp9KXbYMsbRv2-ChTv98xXTqG1UskLOX0LAAHJsn77qN1gbPHC_clwqDrd1uqHH0H0HMUcSWmwHgJmWWajHYFZawaOQWw' />
+      </a>
     </div>
-    </div>
-    </section>
- 
+  </div>
+</section>
+</div>
 
+    
 <!--Actual body/meat of website-->
-    
-<h3 id = "about" class="subHeading">About</h3>
-<p class = "info">I first learned about coding alongside my 5th graders. After 8 years teaching English as a Second Language, I decided to switch careers. Today, I am proficient in regular expressions, HTML, CSS, JavaScript, jQuery, and ReactJS
-</p>
-  <hr>
-    
-<h3 id = "portfolio" class="subHeading">Portfolio</h3>
-    <p>You can view code for these and other projects on <a href = 'https://github.com/jennnico' >GitHub. </a></p>
-   <div class="flex-container">
-      <a href = "https://codepen.io/jennnico/pen/GQPqXa"> <img  src="http://res.cloudinary.com/jennnico/image/upload/v1528394025/Colors.jpg" class="projects" style = "align-self: center" /></a>
-  <a href="https://codepen.io/jennnico/pen/vpZVeZ"><img src="https://res.cloudinary.com/jennnico/image/upload/v1528394039/Pomodoro_Clock.jpg" class="projects" style = "align-self: center" /></a>
- <a href="https://codepen.io/jennnico/pen/yKaxzw"> <img src="https://res.cloudinary.com/jennnico/image/upload/v1528394048/Weather.jpg" class="projects" style = "align-self: center" /></a>
-    </div>
-    <hr>
-    
-<h3 id = "contact" class="subHeading">Contact</h3>
-    <div class = "info">
-      <p>Contact me on <a href="https://www.linkedin.com/in/jennifergrace/">LinkedIn</a></p>
-    </div>
-
-
-
-  
-  <!--linkedin-->
-  <a href = "https://www.linkedin.com/in/jennifergrace/">
-      <img src = "https://zurb.com/playground/uploads/upload/upload/154/linkedin-icon.png" style="width:2em;"/>
-    </a>
-    
  
-
-
+<div id="about">
+  <h3 class="subHeading">About</h3>
+  <p class = "info">I first learned about coding alongside my 5th graders. After 8 years teaching English as a Second Language, I decided to switch careers. </p>
+  <p class = "info">Today, I am proficient in regular expressions, HTML5, CSS, JavaScript, jQuery, and ReactJS.</p>
+    
+  <img  src="https://res.cloudinary.com/jennnico/image/upload/v1529359640/1002557_655861631092542_427218778_n.jpg" alt = '' id="china" style = "align-self: center" />
+  <p class="caption">I also spent a summer teaching ESL in Beijing.</p>
+</div>
+    
+<div id="portfolio">  
+  <h3 class="subHeading">Portfolio</h3>
+  <p>You can view code for these and other projects on 
+    <a href = 'https://github.com/jennnico' target="blank" rel="noopener">GitHub.</a>
+  </p>
+  <div class="flex-container">
+      <a href = "https://codepen.io/jennnico/pen/GQPqXa" target="blank" rel="noopener"> 
+        <img  src="http://res.cloudinary.com/jennnico/image/upload/v1528394025/Colors.jpg" alt = "" class="projects" style = "align-self: center" /> 
+        <p class = "caption">Matching Activity for English Learners</p></a>
+      <a href="https://codepen.io/jennnico/pen/vpZVeZ" target="blank" rel="noopener">
+        <img src="https://res.cloudinary.com/jennnico/image/upload/v1528394039/Pomodoro_Clock.jpg" alt = ""  class="projects" style = "align-self: center" /> 
+        <p class = "caption">Pomodoro Clock</p> </a>
+      <a href="https://codepen.io/jennnico/pen/yKaxzw" target="blank" rel="noopener"> 
+        <img src="https://res.cloudinary.com/jennnico/image/upload/v1528394048/Weather.jpg" alt = ""  class="projects" style = "align-self: center" /> 
+        <p class = "caption">Weather App</p> </a>
+  </div>
+</div>
+   
+<div id="contact">
+  <h3 class="subHeading">Contact</h3>
+    <div class = "info">
+      <p>Contact me on 
+        <a href="https://www.linkedin.com/in/jennifergrace/" target="blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
 
 </body>
+  </html>
