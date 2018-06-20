@@ -9,10 +9,12 @@ body{
 /*navigation bar*/
 ul {
   list-style-type: none;
- overflow: hidden;
+  overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  background: #eaeaea;
+  z-index: 1;
 }
 
 .nav li a{
@@ -29,11 +31,12 @@ ul {
   transition: .7s background-color;
 }
 
+/*Grey Box*/
 .row{
   border: double #dbdbdb;
   height: 25rem;
   max-width: 65rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 /*My name*/
@@ -55,26 +58,38 @@ h1{
   animation-duration: 4s;
 }
 
+/*Used on images*/
 @keyframes appear{
   0%{opacity:0;}  
   100%{opacity:1;}
 }
 
+/*About, Portfolio, Contact: subheadings*/
 .subHeading{
   margin-top:3rem;
 }
 
+/*About, Portfolio, Contact: content*/
 .info{
-  max-width: 60rem;
+  max-width: 50rem;
   margin-left:auto; 
   margin-right:auto;
-  margin-bottom:3rem;
 }
 
-hr{
-  max-width:75rem;
+/*Beijing Photo*/
+#china{
+  width: 15rem; 
+  border: 1px solid #dbdbdb;
+  animation-name: appear;
+  animation-duration: 5s;
 }
 
+/*captions*/
+.caption{
+  font-size: .75rem;
+}
+
+/*Portfolio images: container*/
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -83,8 +98,10 @@ hr{
   margin-bottom:3rem;
 }
 
+/*Portfolio images: single images*/
 .projects{
-  border: solid #dbdbdb;
   max-width:20rem;
+  animation-name: appear;
+  animation-duration: 5s;
 }
 
