@@ -1,9 +1,11 @@
 # PortfolioPage
 
-Portfolio page using HTML and CSS only.
+Portfolio page using HTML5, CSS, and jQuery.
 
 Hightlights:
 
-Fixed position navigation bar.
+@keyframes used to make images fade-in.
 
-Hyperlinks to completed projects on CodePen, and LinkedIn profile.
+.hide() and .fadeIn() used in conjunction with navigation bar to animate text.
+
+Includes hyperlinks to GitHub page, CodePen projects, and LinkedIn profile
